@@ -284,6 +284,9 @@ void PcapSession::Open(bool live, const Nan::FunctionCallbackInfo<Value>& info)
     case DLT_LINUX_SLL: // "Linux cooked capture"
         ret = Nan::New("LINKTYPE_LINUX_SLL").ToLocalChecked();
         break;
+    case DLT_USB_LINUX_MMAPPED:
+        ret = Nan::New("LINKTYPE_USB_LINUX_MMAPPED").ToLocalChecked();
+        break;
     default:
         snprintf(errbuf, PCAP_ERRBUF_SIZE, "Unknown linktype %d", link_type);
         ret = Nan::New(errbuf).ToLocalChecked();

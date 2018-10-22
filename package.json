@@ -15,6 +15,7 @@
     "node": ">=0.10"
   },
   "dependencies": {
+    "int64-buffer": "^0.99.1007",
     "nan": "^2.0.9",
     "socketwatcher": "git+https://github.com/bytzdev/node-socketwatcher.git"
   },
